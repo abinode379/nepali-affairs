@@ -55,15 +55,7 @@ export default function SubmitPage() {
 
   return (
     <section className="min-h-screen bg-black py-16 text-white">
-      <div className="mx-auto max-w-4xl space-y-10 px-4 sm:px-6 lg:px-8">
-        <div className="rounded-[2rem] border border-[#222222] bg-[#111111] p-8 shadow-[0_24px_80px_rgba(255,255,255,0.07)]">
-          <p className="text-sm uppercase tracking-[0.35em] text-[#A1A1AA]">Submit anonymously</p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">Share your anonymous confession</h1>
-          <p className="mt-4 max-w-3xl text-[#A1A1AA]">
-            Your confession is submitted anonymously.
-          </p>
-        </div>
-
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <form onSubmit={handleSubmit} className="space-y-8 rounded-[2rem] border border-[#222222] bg-[#111111] p-8 shadow-[0_24px_80px_rgba(255,255,255,0.07)]">
           <div className="grid gap-6 sm:grid-cols-2">
             <label className="space-y-3">
