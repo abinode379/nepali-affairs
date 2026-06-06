@@ -54,7 +54,7 @@ export default function SubmitPage() {
   }
 
   return (
-    <section className="min-h-screen bg-black py-16 text-white">
+    <section className="min-h-screen bg-black py-8 text-white">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <form onSubmit={handleSubmit} className="space-y-8 rounded-[2rem] border border-[#222222] bg-[#111111] p-8 shadow-[0_24px_80px_rgba(255,255,255,0.07)]">
           <div className="grid gap-6 sm:grid-cols-2">
