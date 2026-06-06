@@ -1,0 +1,31 @@
+{
+  "name": "nepali-affairs",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/auth-helpers-nextjs": "^0.15.0",
+    "@supabase/auth-helpers-react": "^0.15.0",
+    "@supabase/supabase-js": "^2.76.1",
+    "next": "^15.2.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwindcss": "^3.4.4",
+    "postcss": "^8.4.40",
+    "autoprefixer": "^10.4.20"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.1",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "typescript": "5.5.4",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^15.2.0",
+    "eslint-plugin-tailwindcss": "3.18.3"
+  }
+}
