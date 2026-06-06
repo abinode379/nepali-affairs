@@ -12,7 +12,7 @@ export default async function AdminPage() {
     throw new Error('Supabase URL and anon key are required. Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY or SUPABASE_URL and SUPABASE_ANON_KEY.');
   }
 
-  const cookieStore = await cookies();
+  const cookieStore = cookies();
 
   const supabase = createServerClient(
     supabaseUrl,
@@ -23,11 +23,10 @@ export default async function AdminPage() {
           cookieStore.getAll().map((cookie) => ({
             name: cookie.name,
             value: cookie.value,
-            options: cookie.options ?? {},
           })),
         setAll: (cookieList) => {
           cookieList.forEach((cookie) => {
-            cookieStore.set(cookie.name, cookie.value, cookie.options ?? {});
+            cookieStore.set(cookie.name, cookie.value);
           });
         },
       },
