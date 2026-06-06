@@ -21,11 +21,10 @@ export async function GET() {
           cookieStore.getAll().map((cookie) => ({
             name: cookie.name,
             value: cookie.value,
-            options: cookie.options ?? {},
           })),
         setAll: (cookieList) => {
           cookieList.forEach((cookie) => {
-            cookieStore.set(cookie.name, cookie.value, cookie.options ?? {});
+            cookieStore.set(cookie.name, cookie.value);
           });
         },
       },
