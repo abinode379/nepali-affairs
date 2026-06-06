@@ -1,18 +1,21 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useEffect, useState, type FormEvent } from 'react';
+import { useRouter } from 'next/navigation';
 import { supabaseBrowser } from '../../../lib/supabase-browser';
 
 export default function AdminLoginPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
+  const [unauthorized, setUnauthorized] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const unauthorized = searchParams.get('unauthorized');
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setUnauthorized(params.get('unauthorized') === '1');
+  }, []);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
